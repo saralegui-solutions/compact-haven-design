@@ -2,14 +2,17 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { Check } from "lucide-react";
-import floorPlan from "@/assets/floor-plan.jpg";
+import renderSerie10 from "@/assets/render-serie-10.jpg";
+import renderSerie20 from "@/assets/render-serie-20.jpg";
+import renderSerie30 from "@/assets/render-serie-30.jpg";
 
 const DesignPackages = () => {
   const packages = [
     {
       series: "Serie 10",
-      area: "30-40 m²",
-      price: "6,500",
+      area: "10-15 m²",
+      price: "500",
+      image: renderSerie10,
       features: [
         "Planta arquitectónica amueblada",
         "2 renders fotorrealistas",
@@ -19,9 +22,10 @@ const DesignPackages = () => {
     },
     {
       series: "Serie 20",
-      area: "41-55 m²",
-      price: "8,900",
+      area: "20-25 m²",
+      price: "600",
       popular: true,
+      image: renderSerie20,
       features: [
         "Planta arquitectónica amueblada",
         "3 renders fotorrealistas",
@@ -32,20 +36,20 @@ const DesignPackages = () => {
     },
     {
       series: "Serie 30",
-      area: "56-70 m²",
-      price: "11,500",
+      area: "30-40 m²",
+      price: "700",
+      image: renderSerie30,
       features: [
         "Planta arquitectónica amueblada",
         "4 renders fotorrealistas",
         "Catálogo premium de mobiliario",
         "Lista completa de decoraciones",
-        "Guía de compras personalizada",
-        "Consultoría de diseño 1 hora"
+        "Guía de compras personalizada"
       ]
     }
   ];
 
-  const styles = ["Nordic Line", "Boho Vibes", "Urban Industrial"];
+  const styles = ["Nordic Line", "Boho Vibes", "Urban Steel"];
 
   return (
     <section className="py-20">
@@ -72,48 +76,49 @@ const DesignPackages = () => {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
-          <div className="flex items-center justify-center">
-            <img 
-              src={floorPlan} 
-              alt="Ejemplo de planta arquitectónica" 
-              className="rounded-lg shadow-medium w-full max-w-lg"
-            />
-          </div>
-
-          <div className="space-y-6">
-            {packages.map((pkg) => (
-              <Card 
-                key={pkg.series} 
-                className={`${pkg.popular ? 'border-accent border-2' : ''} relative overflow-hidden`}
-              >
-                {pkg.popular && (
-                  <div className="absolute top-0 right-0 bg-accent text-white px-4 py-1 text-sm font-medium">
-                    Más Popular
-                  </div>
-                )}
-                <CardHeader>
-                  <div className="flex justify-between items-start">
-                    <div>
-                      <h3 className="font-serif text-2xl font-bold text-primary">{pkg.series}</h3>
-                      <p className="text-muted-foreground">{pkg.area}</p>
+        <div className="space-y-12 mb-12">
+          {packages.map((pkg) => (
+            <div key={pkg.series} className="grid md:grid-cols-2 gap-8 items-center">
+              <div className={pkg.series === "Serie 20" || pkg.series === "Serie 30" ? "md:order-2" : ""}>
+                <img 
+                  src={pkg.image} 
+                  alt={`Render ${pkg.series} - ${pkg.area}`}
+                  className="rounded-lg shadow-medium w-full"
+                />
+              </div>
+              
+              <div className={pkg.series === "Serie 20" || pkg.series === "Serie 30" ? "md:order-1" : ""}>
+                <Card 
+                  className={`${pkg.popular ? 'border-accent border-2' : ''} relative overflow-hidden`}
+                >
+                  {pkg.popular && (
+                    <div className="absolute top-0 right-0 bg-accent text-white px-4 py-1 text-sm font-medium">
+                      Más Popular
                     </div>
-                    <p className="text-3xl font-bold text-primary">${pkg.price}</p>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2">
-                    {pkg.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start gap-2">
-                        <Check className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
-                        <span className="text-sm text-foreground">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+                  )}
+                  <CardHeader>
+                    <div className="flex justify-between items-start">
+                      <div>
+                        <h3 className="font-serif text-2xl font-bold text-primary">{pkg.series}</h3>
+                        <p className="text-muted-foreground">{pkg.area}</p>
+                      </div>
+                      <p className="text-3xl font-bold text-primary">${pkg.price}</p>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-2">
+                      {pkg.features.map((feature, idx) => (
+                        <li key={idx} className="flex items-start gap-2">
+                          <Check className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                          <span className="text-sm text-foreground">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          ))}
         </div>
 
         <div className="text-center">
