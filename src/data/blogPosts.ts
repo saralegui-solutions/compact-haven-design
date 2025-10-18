@@ -4,92 +4,205 @@ export interface BlogPost {
   excerpt: string;
   date: string;
   category: string;
+  images?: string[];
   content?: string;
 }
 
 export const blogPosts: BlogPost[] = [
   {
-    id: 1,
-    title: "5 Reglas de Oro para Maximizar un Departamento de 35m²",
-    excerpt: "Descubre cómo la psicología del espacio y el uso inteligente del color pueden hacer que tu departamento pequeño se sienta más amplio.",
-    date: "2025-01-15",
-    category: "Diseño de Interiores",
+    id: 5,
+    title: "Minimalismo Consciente",
+    excerpt: "Descubre cómo adoptar un estilo de vida minimalista que transforme tu espacio y tu bienestar diario.",
+    date: "2025-11-17",
+    category: "Estilo de Vida",
+    images: [
+      "/src/assets/blog/minimalist-home.jpg",
+      "/src/assets/blog/clean-space.jpg",
+      "/src/assets/blog/organized-living.jpg"
+    ],
     content: `
-# 5 Reglas de Oro para Maximizar un Departamento de 35m²
+# Minimalismo Consciente
 
-Vivir en un espacio reducido no significa sacrificar estilo o funcionalidad. Con las estrategias correctas, un departamento de 35m² puede transformarse en un hogar cómodo, organizado y visualmente amplio.
+El minimalismo no se trata solo de tener menos cosas, sino de crear un espacio que refleje tus valores y prioridades, permitiéndote vivir con mayor intención y claridad.
 
-## 1. Aprovecha la Luz Natural
+## El Verdadero Significado del Minimalismo
 
-La luz natural es tu mejor aliada para hacer que los espacios se sientan más grandes. Evita cortinas pesadas y opta por opciones translúcidas que permitan el paso de luz. Los espejos estratégicamente ubicados frente a las ventanas duplican la sensación de amplitud.
+El minimalismo consciente va más allá de la estética. Es una filosofía de vida que busca eliminar el exceso para hacer espacio a lo que realmente importa: experiencias, relaciones y crecimiento personal.
 
-## 2. Paleta de Colores Claros
+![Hogar minimalista](/src/assets/blog/minimalist-home.jpg)
 
-Los tonos neutros y claros no solo están de moda, sino que tienen un fundamento científico: reflejan mejor la luz y crean la ilusión de espacios más grandes. Usa colores como blanco hueso, grises suaves y beiges cálidos como base.
+## Beneficios del Minimalismo
 
-## 3. Mobiliario a Escala
+### Claridad Mental
+Menos desorden físico se traduce en menos desorden mental. Un espacio ordenado facilita la concentración y reduce el estrés.
 
-Este es uno de los errores más comunes: elegir muebles demasiado grandes. Cada pieza debe ser proporcional al espacio. Un sofá de dos plazas puede ser mejor opción que uno de tres, y una mesa extensible te dará flexibilidad.
+### Libertad Financiera
+Al comprar menos y con más intención, ahorras dinero y reduces la necesidad de espacio de almacenamiento.
 
-## 4. Zonas Definidas con Elementos Visuales
+### Tiempo Recuperado
+Menos posesiones significa menos tiempo dedicado a limpiar, organizar y mantener.
 
-Aunque el espacio sea abierto, definir zonas te ayudará a organizarlo mejor. Usa alfombras, cambios en la iluminación o biombos ligeros para delimitar áreas sin levantar paredes.
+![Espacio limpio y ordenado](/src/assets/blog/clean-space.jpg)
 
-## 5. Almacenamiento Vertical
+## Cómo Comenzar
 
-El espacio vertical suele ser el más desaprovechado. Instala estanterías hasta el techo, usa organizadores de pared y aprovecha el espacio bajo la cama con cajones.
+### 1. El Método Marie Kondo
+Evalúa cada objeto preguntándote: "¿Esto me genera alegría o sirve a un propósito esencial?"
 
-Con estas cinco reglas fundamentales, tu departamento de 35m² se convertirá en un espacio que no solo funciona, sino que refleja tu estilo personal.
+### 2. La Regla del Uno Entra, Uno Sale
+Por cada nuevo artículo que ingresa a tu hogar, uno debe salir.
+
+### 3. Espacios de Respiración
+Deja áreas vacías intencionalmente. No todo espacio necesita ser llenado.
+
+### 4. Calidad sobre Cantidad
+Invierte en menos piezas, pero de mejor calidad y diseño atemporal.
+
+## Minimalismo en Diseño
+
+El diseño minimalista se caracteriza por:
+- Líneas limpias y simples
+- Paletas de colores neutros
+- Materiales naturales y de calidad
+- Funcionalidad sin sacrificar estética
+- Espacios abiertos y luminosos
+
+![Organización consciente](/src/assets/blog/organized-living.jpg)
+
+## Errores Comunes
+
+- **Minimalismo extremo**: No se trata de vivir con lo mínimo indispensable, sino con lo necesario para tu bienestar
+- **Sacrificar comodidad**: El minimalismo debe mejorar tu vida, no complicarla
+- **Seguir tendencias**: Tu espacio debe reflejar tus necesidades, no las de Instagram
+
+## El Impacto Emocional
+
+Un espacio minimalista bien curado tiene efectos profundos:
+- Reduce la ansiedad y el estrés
+- Mejora la calidad del sueño
+- Aumenta la productividad
+- Fomenta la creatividad
+- Facilita el mantenimiento del orden
+
+El minimalismo consciente es un viaje personal hacia una vida más intencional, donde cada objeto en tu espacio tiene un propósito y significado.
     `
   },
   {
-    id: 2,
-    title: "Mobiliario Multifuncional: La Clave del Confort en Espacios Reducidos",
-    excerpt: "Aprende a seleccionar muebles que cumplan múltiples funciones sin sacrificar estética ni comodidad.",
-    date: "2025-01-10",
-    category: "Tips de Espacio",
+    id: 4,
+    title: "Psicología del Color",
+    excerpt: "Aprende cómo los colores influyen en nuestras emociones y cómo utilizarlos para crear ambientes que promuevan el bienestar.",
+    date: "2025-10-20",
+    category: "Bienestar Espacial",
+    images: [
+      "/src/assets/blog/neutral-palette.jpg",
+      "/src/assets/blog/color-psychology.jpg",
+      "/src/assets/blog/warm-colors.jpg"
+    ],
     content: `
-# Mobiliario Multifuncional: La Clave del Confort en Espacios Reducidos
+# Psicología del Color
 
-En departamentos pequeños, cada mueble debe ganarse su lugar. El mobiliario multifuncional no solo optimiza el espacio, sino que puede elevar el diseño de tu hogar.
+Los colores tienen un impacto profundo en nuestras emociones, comportamiento y bienestar. En espacios pequeños, usar la psicología del color estratégicamente puede transformar completamente la experiencia de vivir.
 
-## ¿Qué es el Mobiliario Multifuncional?
+## El Poder de los Colores Neutros
 
-Son piezas diseñadas para cumplir más de una función, permitiéndote maximizar cada metro cuadrado sin saturar visualmente el espacio.
+Los tonos neutros no son aburridos; son la base perfecta para crear espacios sofisticados y versátiles que se adaptan a tu estado de ánimo y necesidades.
 
-## Ejemplos Clave
+![Paleta neutra elegante](/src/assets/blog/neutral-palette.jpg)
 
-### Sofá Cama de Calidad
-No todos los sofás cama son iguales. Invierte en uno con buen soporte y fácil mecanismo de apertura. Tu espalda y tus invitados te lo agradecerán.
+## Cómo los Colores Afectan el Espacio
 
-### Mesa Extensible
-Una mesa que se expande cuando tienes visitas y se contrae para el día a día es esencial. Busca diseños con almacenamiento integrado para maximizar su utilidad.
+### Colores Claros: Amplitud Visual
+- **Blanco y beige**: Reflejan luz, hacen que los espacios se sientan más grandes
+- **Gris claro**: Sofisticado y sereno, perfecto para crear calma
+- **Crema**: Aporta calidez sin sacrificar luminosidad
 
-### Cama con Cajones
-El espacio bajo la cama es oro puro. Opta por camas con cajones integrados o agrega contenedores con ruedas para ropa de temporada, zapatos o ropa de cama extra.
+### Colores Oscuros: Profundidad y Drama
+Contrario a la creencia popular, los colores oscuros pueden funcionar en espacios pequeños cuando se usan estratégicamente:
+- En una sola pared de acento
+- En elementos arquitectónicos
+- Combinados con iluminación adecuada
 
-### Muebles Modulares
-Los sistemas modulares te permiten adaptar tu espacio según tus necesidades cambiantes. Desde estanterías hasta sofás, la flexibilidad es clave.
+![Psicología del color en interiores](/src/assets/blog/color-psychology.jpg)
 
-## Consejos de Compra
+## El Impacto Emocional de los Colores
 
-1. **Prioriza la calidad sobre la cantidad**: Mejor pocos muebles bien hechos que muchos de baja calidad
-2. **Mide tres veces, compra una vez**: Asegúrate de que las piezas quepa por puertas y pasillos
-3. **Piensa en el futuro**: Elige piezas atemporales que se adapten a diferentes estilos
+### Azul
+- **Efecto**: Calma, concentración, confianza
+- **Uso ideal**: Dormitorios, espacios de trabajo
+- **Tip**: Tonos suaves para no enfriar demasiado el espacio
 
-El mobiliario multifuncional es una inversión inteligente que transformará tu forma de vivir en espacios reducidos.
+### Verde
+- **Efecto**: Equilibrio, renovación, conexión con la naturaleza
+- **Uso ideal**: Cualquier espacio, especialmente salas de estar
+- **Tip**: Desde salvia hasta oliva, hay un verde para cada estilo
+
+### Amarillo
+- **Efecto**: Energía, optimismo, creatividad
+- **Uso ideal**: Cocinas, espacios de desayuno
+- **Tip**: Usa tonos mostaza o miel para evitar saturación
+
+### Terracota y Cálidos
+- **Efecto**: Calidez, acogimiento, conexión
+- **Uso ideal**: Salas de estar, comedores
+- **Tip**: Perfecto para crear atmósferas íntimas
+
+![Colores cálidos en el hogar](/src/assets/blog/warm-colors.jpg)
+
+## La Regla 60-30-10
+
+Una fórmula profesional para equilibrar colores:
+- **60%**: Color dominante (paredes, muebles grandes)
+- **30%**: Color secundario (tapicería, cortinas)
+- **10%**: Color de acento (cojines, arte, accesorios)
+
+## Temperatura del Color
+
+### Colores Cálidos (rojos, naranjas, amarillos)
+- Hacen que los espacios se sientan más acogedores
+- Pueden hacer que las habitaciones parezcan más pequeñas
+- Ideales para espacios orientados al norte
+
+### Colores Fríos (azules, verdes, violetas)
+- Crean sensación de calma y amplitud
+- Pueden hacer que los espacios se sientan más grandes
+- Perfectos para espacios orientados al sur
+
+## Estrategias para Espacios Pequeños
+
+1. **Monocromático con profundidad**: Usa diferentes tonos del mismo color para crear interés sin fragmentar el espacio
+
+2. **Techo claro, paredes medias**: Esta técnica crea sensación de altura
+
+3. **Acentos estratégicos**: En lugar de muchos colores, elige uno o dos acentos vibrantes
+
+4. **Continuidad visual**: Mantén el mismo color de piso en todo el espacio para ampliar visualmente
+
+## Errores Comunes
+
+- **Demasiados colores**: Más de 3-4 colores principales fragmentan visualmente el espacio
+- **Ignorar la iluminación**: Los colores se ven diferentes con luz natural vs artificial
+- **Seguir tendencias sin pensar**: Elige colores que resuenen contigo, no solo lo que está de moda
+
+La psicología del color es una herramienta poderosa para crear espacios que no solo se ven bien, sino que se sienten bien y apoyan tu bienestar diario.
     `
   },
   {
     id: 3,
-    title: "Zonificación: Crea Áreas Independientes en tu Monoambiente",
+    title: "Zonificación: Crea Áreas Independientes",
     excerpt: "Técnicas profesionales para delimitar espacios y crear sensación de privacidad en departamentos abiertos.",
-    date: "2025-01-05",
+    date: "2025-09-22",
     category: "Arquitectura",
+    images: [
+      "/src/assets/blog/studio-apartment.jpg",
+      "/src/assets/blog/space-divider.jpg",
+      "/src/assets/blog/open-space-living.jpg"
+    ],
     content: `
 # Zonificación: Crea Áreas Independientes en tu Monoambiente
 
 Los monoambientes presentan un desafío único: cómo crear diferentes áreas funcionales sin paredes físicas. La zonificación efectiva es la respuesta.
+
+![Monoambiente funcional](/src/assets/blog/studio-apartment.jpg)
 
 ## La Importancia de Delimitar Espacios
 
@@ -99,6 +212,8 @@ Nuestro cerebro necesita señales claras para entender el propósito de cada ár
 
 ### 1. Alfombras como Delimitadores
 Una alfombra bajo el área de comedor o la zona de estar define visualmente el espacio sin necesidad de paredes. Elige tamaños que dejen al menos 15cm de espacio entre la alfombra y los muebles.
+
+![Divisores de espacio](/src/assets/blog/space-divider.jpg)
 
 ### 2. Cambios en el Piso
 Si estás en proceso de renovación, considera diferentes materiales de piso para cada zona: madera en la sala, cerámica en la cocina.
@@ -112,6 +227,8 @@ Un librero de doble cara, un biombo plegable o incluso el respaldo de un sofá p
 ### 5. Cambios de Color
 Pintar una pared de diferente color o usar papel tapiz en una sección específica ayuda a delimitar áreas sin ocupar espacio físico.
 
+![Espacios abiertos organizados](/src/assets/blog/open-space-living.jpg)
+
 ## Errores Comunes a Evitar
 
 - **No bloquear el paso de luz natural**: Los divisores deben ser estratégicos, no obstáculos
@@ -122,128 +239,97 @@ Con estas técnicas, tu monoambiente tendrá la funcionalidad de un departamento
     `
   },
   {
-    id: 4,
-    title: "El Poder de los Colores Neutros en Espacios Compactos",
-    excerpt: "Aprende cómo utilizar paletas neutras con acentos estratégicos para amplificar visualmente tu departamento y crear atmósferas distintas en cada zona.",
-    date: "2024-12-28",
-    category: "Diseño de Interiores",
+    id: 2,
+    title: "Mobiliario Multifuncional: La Clave del Confort",
+    excerpt: "Aprende a seleccionar muebles que cumplan múltiples funciones sin sacrificar estética ni comodidad.",
+    date: "2025-08-26",
+    category: "Tips de Espacio",
+    images: [
+      "/src/assets/blog/multifunctional-furniture.jpg",
+      "/src/assets/blog/sofa-bed.jpg",
+      "/src/assets/blog/compact-living.jpg"
+    ],
     content: `
-# El Poder de los Colores Neutros en Espacios Compactos
+# Mobiliario Multifuncional: La Clave del Confort en Espacios Reducidos
 
-Los colores neutros han dominado el diseño de interiores en los últimos años, y no es casualidad. En espacios pequeños, una paleta neutral bien ejecutada puede transformar completamente la percepción del espacio.
+En departamentos pequeños, cada mueble debe ganarse su lugar. El mobiliario multifuncional no solo optimiza el espacio, sino que puede elevar el diseño de tu hogar.
 
-## ¿Por Qué Funcionan los Neutros?
+## ¿Qué es el Mobiliario Multifuncional?
 
-Los tonos neutros actúan como un lienzo en blanco que:
-- Reflejan más luz, amplificando la sensación de espacio
-- Crean continuidad visual, eliminando barreras perceptuales
-- Permiten que los muebles y objetos decorativos destaquen
+Son piezas diseñadas para cumplir más de una función, permitiéndote maximizar cada metro cuadrado sin saturar visualmente el espacio.
 
-## Más Allá del Blanco
+![Muebles multifuncionales](/src/assets/blog/multifunctional-furniture.jpg)
 
-Si bien el blanco puro es efectivo, los neutros cálidos como el beige, el gris topo y el blanco hueso aportan calidez sin sacrificar amplitud.
+## Ejemplos Clave
 
-### Paleta Recomendada:
-- **Base**: Blanco hueso o gris muy claro en paredes
-- **Medios**: Grises medios, taupes en muebles grandes
-- **Oscuros**: Negro o gris carbón en acentos y detalles
+### Sofá Cama de Calidad
+No todos los sofás cama son iguales. Invierte en uno con buen soporte y fácil mecanismo de apertura. Tu espalda y tus invitados te lo agradecerán.
 
-## Acentos Estratégicos
+![Sofá cama elegante](/src/assets/blog/sofa-bed.jpg)
 
-Los neutros necesitan puntos de interés para evitar que el espacio se sienta estéril:
+### Mesa Extensible
+Una mesa que se expande cuando tienes visitas y se contrae para el día a día es esencial. Busca diseños con almacenamiento integrado para maximizar su utilidad.
 
-### Texturas
-Combina diferentes texturas: lino, terciopelo, madera, metal. La variación táctil añade profundidad sin necesidad de color.
+### Cama con Cajones
+El espacio bajo la cama es oro puro. Opta por camas con cajones integrados o agrega contenedores con ruedas para ropa de temporada, zapatos o ropa de cama extra.
 
-### El Poder del 80/20
-Mantén el 80% de tu espacio en neutros y usa el 20% restante para acentos de color. Esto puede ser en:
-- Cojines y textiles
-- Arte y fotografías
-- Plantas (el verde siempre funciona)
-- Un mueble statement
+### Muebles Modulares
+Los sistemas modulares te permiten adaptar tu espacio según tus necesidades cambiantes. Desde estanterías hasta sofás, la flexibilidad es clave.
 
-## Jugando con Temperaturas
+![Vida compacta y funcional](/src/assets/blog/compact-living.jpg)
 
-Mezcla neutros cálidos y fríos para crear profundidad:
-- Grises fríos con beiges cálidos
-- Blancos puros con marfiles cremosos
+## Consejos de Compra
 
-## Errores Comunes
+1. **Prioriza la calidad sobre la cantidad**: Mejor pocos muebles bien hechos que muchos de baja calidad
+2. **Mide tres veces, compra una vez**: Asegúrate de que las piezas quepa por puertas y pasillos
+3. **Piensa en el futuro**: Elige piezas atemporales que se adapten a diferentes estilos
 
-- **Todo del mismo tono**: Necesitas variación tonal para crear interés
-- **Ignorar el undertone**: Cada neutro tiene un subtono (azul, amarillo, rosa). Asegúrate de que sean compatibles
-- **Miedo al contraste**: Los neutros brillan cuando hay contraste entre claro y oscuro
-
-Una paleta neutral bien ejecutada hace que tu espacio pequeño se sienta sereno, sofisticado y, sobre todo, más grande.
+El mobiliario multifuncional es una inversión inteligente que transformará tu forma de vivir en espacios reducidos.
     `
   },
   {
-    id: 5,
-    title: "Almacenamiento Vertical: Aprovecha Cada Centímetro",
-    excerpt: "Estrategias inteligentes para maximizar el espacio vertical sin saturar visualmente tu hogar, desde estanterías flotantes hasta soluciones modulares.",
-    date: "2024-12-20",
-    category: "Tips de Espacio",
+    id: 1,
+    title: "5 Reglas de Oro para Maximizar un Departamento de 35m²",
+    excerpt: "Descubre cómo la psicología del espacio y el uso inteligente del color pueden hacer que tu departamento pequeño se sienta más amplio.",
+    date: "2025-07-20",
+    category: "Diseño de Interiores",
+    images: [
+      "/src/assets/blog/small-apartment-light.jpg",
+      "/src/assets/blog/small-space-design.jpg",
+      "/src/assets/blog/minimalist-storage.jpg"
+    ],
     content: `
-# Almacenamiento Vertical: Aprovecha Cada Centímetro
+# 5 Reglas de Oro para Maximizar un Departamento de 35m²
 
-Uno de los secretos mejor guardados del diseño de espacios pequeños es pensar en vertical. Mientras que el espacio de piso es limitado, las paredes ofrecen un territorio inexplorado lleno de potencial.
+Vivir en un espacio reducido no significa sacrificar estilo o funcionalidad. Con las estrategias correctas, un departamento de 35m² puede transformarse en un hogar cómodo, organizado y visualmente amplio.
 
-## La Psicología del Espacio Vertical
+## 1. Aprovecha la Luz Natural
 
-Llevar la mirada hacia arriba con almacenamiento vertical no solo aprovecha espacio, sino que crea la ilusión de techos más altos, haciendo que el espacio se sienta más amplio.
+La luz natural es tu mejor aliada para hacer que los espacios se sientan más grandes. Evita cortinas pesadas y opta por opciones translúcidas que permitan el paso de luz. Los espejos estratégicamente ubicados frente a las ventanas duplican la sensación de amplitud.
 
-## Soluciones Prácticas
+![Luz natural en espacios pequeños](/src/assets/blog/small-apartment-light.jpg)
 
-### Estanterías Hasta el Techo
+## 2. Paleta de Colores Claros
 
-Las estanterías que van desde el piso hasta el techo maximizan cada centímetro. Coloca los objetos que usas frecuentemente al alcance de la mano y los de uso ocasional en la parte superior.
+Los tonos neutros y claros no solo están de moda, sino que tienen un fundamento científico: reflejan mejor la luz y crean la ilusión de espacios más grandes. Usa colores como blanco hueso, grises suaves y beiges cálidos como base.
 
-**Tip profesional**: Pinta las estanterías del mismo color que la pared para que se integren visualmente y no saturen el espacio.
+![Diseño de espacios pequeños](/src/assets/blog/small-space-design.jpg)
 
-### Barras y Ganchos
+## 3. Mobiliario a Escala
 
-No subestimes el poder de los ganchos:
-- En la cocina para utensilios y ollas
-- En el baño para toallas y batas
-- En el dormitorio para bolsos y accesorios
-- En la entrada para llaves, abrigos y paraguas
+Este es uno de los errores más comunes: elegir muebles demasiado grandes. Cada pieza debe ser proporcional al espacio. Un sofá de dos plazas puede ser mejor opción que uno de tres, y una mesa extensible te dará flexibilidad.
 
-### Estanterías Flotantes
+## 4. Zonas Definidas con Elementos Visuales
 
-Las estanterías flotantes son ideales porque:
-- No ocupan espacio visual con soportes
-- Pueden instalarse en espacios muertos (sobre puertas, en esquinas)
-- Crean líneas limpias y modernas
+Aunque el espacio sea abierto, definir zonas te ayudará a organizarlo mejor. Usa alfombras, cambios en la iluminación o biombos ligeros para delimitar áreas sin levantar paredes.
 
-### Sistemas Modulares
+## 5. Almacenamiento Vertical
 
-Los sistemas como el IKEA Ivar o el Elfa de Container Store te permiten personalizar completamente tu almacenamiento vertical y adaptarlo según tus necesidades cambian.
+El espacio vertical suele ser el más desaprovechado. Instala estanterías hasta el techo, usa organizadores de pared y aprovecha el espacio bajo la cama con cajones.
 
-## Zonas Estratégicas
+![Almacenamiento vertical inteligente](/src/assets/blog/minimalist-storage.jpg)
 
-### Sobre la Puerta
-El espacio sobre las puertas es ideal para almacenamiento extra que no uses diariamente.
-
-### Esquinas
-Los estantes esquineros aprovechan espacios que típicamente se desperdician.
-
-### Entre Ventanas
-Si tienes ventanas separadas, el espacio entre ellas es perfecto para estanterías delgadas.
-
-## Reglas de Oro
-
-1. **No sobrecargues**: El almacenamiento vertical pierde su efectividad si está abarrotado
-2. **Crea ritmo visual**: Alterna espacios llenos y vacíos para evitar saturación
-3. **Usa contenedores uniformes**: Cajas y cestas del mismo estilo crean cohesión visual
-4. **Considera el peso**: Asegúrate de instalar correctamente los soportes para cargas pesadas
-
-## El Balance Visual
-
-Mientras aprovechas el espacio vertical, mantén el equilibrio:
-- Deja algunas paredes libres para que el espacio respire
-- Usa el espacio vertical para crear altura, no para acumular
-
-El almacenamiento vertical bien ejecutado es la diferencia entre un espacio que se siente apretado y uno que funciona perfectamente a pesar de su tamaño reducido.
+Con estas cinco reglas fundamentales, tu departamento de 35m² se convertirá en un espacio que no solo funciona, sino que refleja tu estilo personal.
     `
   }
 ];
