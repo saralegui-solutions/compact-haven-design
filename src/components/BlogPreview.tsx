@@ -23,35 +23,34 @@ const BlogPreview = () => {
 
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           {posts.map((post) => (
-            <Card key={post.id} className="group hover:shadow-medium transition-all duration-300">
-              <CardContent className="p-6">
-                <div className="mb-4">
-                  <span className="text-xs font-medium text-accent uppercase tracking-wide">
-                    {post.category}
-                  </span>
-                  <div className="flex items-center gap-2 text-sm text-muted-foreground mt-2">
-                    <Calendar className="h-4 w-4" />
-                    <span>{format(new Date(post.date), "d MMM yyyy", { locale: es })}</span>
+            <Link key={post.id} to={`/blog/${post.id}`}>
+              <Card className="group hover:shadow-medium transition-all duration-300 h-full cursor-pointer">
+                <CardContent className="p-6 flex flex-col h-full">
+                  <div className="mb-4">
+                    <span className="text-xs font-medium text-accent uppercase tracking-wide">
+                      {post.category}
+                    </span>
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground mt-2">
+                      <Calendar className="h-4 w-4" />
+                      <span>{format(new Date(post.date), "d 'de' MMM yyyy", { locale: es })}</span>
+                    </div>
                   </div>
-                </div>
-                
-                <h3 className="font-serif text-xl font-bold mb-3 text-primary group-hover:text-accent transition-colors">
-                  {post.title}
-                </h3>
-                
-                <p className="text-muted-foreground text-sm mb-4 line-clamp-3">
-                  {post.excerpt}
-                </p>
-                
-                <Button 
-                  variant="ghost" 
-                  className="p-0 h-auto text-accent hover:text-accent/80 font-medium group"
-                >
-                  Leer más 
-                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                </Button>
-              </CardContent>
-            </Card>
+                  
+                  <h3 className="font-serif text-xl font-bold mb-3 text-primary group-hover:text-accent transition-colors">
+                    {post.title}
+                  </h3>
+                  
+                  <p className="text-muted-foreground text-sm mb-4 line-clamp-3 flex-grow">
+                    {post.excerpt}
+                  </p>
+                  
+                  <div className="flex items-center text-accent text-sm font-medium group-hover:gap-2 transition-all">
+                    <span>Leer más</span>
+                    <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
           ))}
         </div>
 
