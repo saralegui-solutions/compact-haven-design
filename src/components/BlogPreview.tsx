@@ -2,31 +2,12 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { Calendar, ArrowRight } from "lucide-react";
+import { getLatestPosts } from "@/data/blogPosts";
+import { format } from "date-fns";
+import { es } from "date-fns/locale";
 
 const BlogPreview = () => {
-  const posts = [
-    {
-      id: 1,
-      title: "5 Reglas de Oro para Maximizar un Departamento de 35m²",
-      excerpt: "Descubre cómo la psicología del espacio y el uso inteligente del color pueden hacer que tu departamento pequeño se sienta más amplio.",
-      date: "15 Mar 2024",
-      category: "Diseño de Interiores"
-    },
-    {
-      id: 2,
-      title: "Mobiliario Multifuncional: La Clave del Confort en Espacios Reducidos",
-      excerpt: "Aprende a seleccionar muebles que cumplan múltiples funciones sin sacrificar estética ni comodidad.",
-      date: "10 Mar 2024",
-      category: "Tips de Espacio"
-    },
-    {
-      id: 3,
-      title: "Zonificación: Crea Áreas Independientes en tu Monoambiente",
-      excerpt: "Técnicas profesionales para delimitar espacios y crear sensación de privacidad en departamentos abiertos.",
-      date: "5 Mar 2024",
-      category: "Arquitectura"
-    }
-  ];
+  const posts = getLatestPosts(3);
 
   return (
     <section className="py-20 bg-acordeon/10">
@@ -50,7 +31,7 @@ const BlogPreview = () => {
                   </span>
                   <div className="flex items-center gap-2 text-sm text-muted-foreground mt-2">
                     <Calendar className="h-4 w-4" />
-                    <span>{post.date}</span>
+                    <span>{format(new Date(post.date), "d MMM yyyy", { locale: es })}</span>
                   </div>
                 </div>
                 
