@@ -17,7 +17,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename="/compact-haven-design">
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/catalogo" element={<Catalog />} />
